@@ -14,6 +14,9 @@ importers:
       '@intrnl/xxhash64':
         specifier: ^0.1.2
         version: 0.1.2
+      '@openpgp/web-stream-tools':
+        specifier: ^0.3.1
+        version: 0.3.1(@types/node@26.0.1)(typescript@6.0.3)
       '@vap/core':
         specifier: 0.0.12
         version: 0.0.12
@@ -32,6 +35,9 @@ importers:
       nanoid:
         specifier: ^5.1.16
         version: 5.1.16
+      openpgp:
+        specifier: ^6.3.1
+        version: 6.3.1(@openpgp/web-stream-tools@0.3.1(@types/node@26.0.1)(typescript@6.0.3))
       virtual-merge:
         specifier: ^1.0.1
         version: 1.0.2
@@ -501,6 +507,18 @@ packages:
   '@nodelib/fs.walk@1.2.8':
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
+
+  '@openpgp/web-stream-tools@0.3.1':
+    resolution: {integrity: sha512-EV+VQ4Dr8b+JmlGnc74FLgx7EhLyydOr4j6s6Hp+2scQh6sLQMs2h+1oEYUIslXcQPicWKG5ZQx+/dua0dgPWA==}
+    engines: {node: '>= 18.0.0'}
+    peerDependencies:
+      '@types/node': '>=18.0.0'
+      typescript: '>=4.7'
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      typescript:
+        optional: true
 
   '@puppeteer/browsers@3.0.5':
     resolution: {integrity: sha512-xYXNuEQmHNIPWWcbL/skf2KF7seyp7c1xmKFRk3wmdFx7VwBsKVrtOLKs8ecaezsKPsWeF1YsgwIiElAscaryA==}
@@ -1388,7 +1406,7 @@ packages:
     engines: {node: '>=0.10.0'}
 
   gifenc@https://codeload.github.com/mattdesl/gifenc/tar.gz/64842fca317b112a8590f8fef2bf3825da8f6fe3:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/mattdesl/gifenc/tar.gz/64842fca317b112a8590f8fef2bf3825da8f6fe3}
+    resolution: {gitHosted: true, integrity: sha512-xP/ugyNyXc2Go2SpipSltQx9LTL2qR/URxgRxs2VEpvKokR8xPOABiHCD1DWQVt1/gHX/6IBozamH/rgOLFLuQ==, tarball: https://codeload.github.com/mattdesl/gifenc/tar.gz/64842fca317b112a8590f8fef2bf3825da8f6fe3}
     version: 1.0.3
 
   glob-parent@5.1.2:
@@ -1961,6 +1979,15 @@ packages:
   object.values@1.2.1:
     resolution: {integrity: sha512-gXah6aZrcUxjWg2zR2MwouP2eHlCBzdV4pygudehaKXSGW4v2AsRQUK+lwwXhii6KFZcunEnmSUoYp5CXibxtA==}
     engines: {node: '>= 0.4'}
+
+  openpgp@6.3.1:
+    resolution: {integrity: sha512-7oSPvmlKPojxFoyelT5DWPIAVmqWZh4qU/5pO6bdoShEtRpCw9Sye9IXUQj6EFM3XpgGssqccAr705YtTcLNQw==}
+    engines: {node: '>= 18.0.0', typescript: '>= 5.0.0'}
+    peerDependencies:
+      '@openpgp/web-stream-tools': ~0.3.0
+    peerDependenciesMeta:
+      '@openpgp/web-stream-tools':
+        optional: true
 
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
@@ -2827,6 +2854,11 @@ snapshots:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.20.1
+
+  '@openpgp/web-stream-tools@0.3.1(@types/node@26.0.1)(typescript@6.0.3)':
+    optionalDependencies:
+      '@types/node': 26.0.1
+      typescript: 6.0.3
 
   '@puppeteer/browsers@3.0.5':
     dependencies:
@@ -4567,6 +4599,10 @@ snapshots:
       call-bound: 1.0.4
       define-properties: 1.2.1
       es-object-atoms: 1.1.2
+
+  openpgp@6.3.1(@openpgp/web-stream-tools@0.3.1(@types/node@26.0.1)(typescript@6.0.3)):
+    optionalDependencies:
+      '@openpgp/web-stream-tools': 0.3.1(@types/node@26.0.1)(typescript@6.0.3)
 
   optionator@0.9.4:
     dependencies:
